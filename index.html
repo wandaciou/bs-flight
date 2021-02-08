@@ -1,55 +1,109 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="assets/css/starter.css">
-    <title>Bootstrap npm starter</title>
-  </head>
-  <body>
-    <div class="col-md-8 mx-auto">
-      <h1>Hello, world!</h1>
-      <p>You've successfully loaded up the Bootstrap npm starter project!</p>
-      <p>If this button looks blue and the text purple, you've done it.</p>
-      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Click me!</button>
 
-      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Success!</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+  <script type="text/javascript" src="assets/js/moment.min.js"></script>
+  <script type="text/javascript" src="assets/js/daterangepicker.js"></script>
+  <link rel="stylesheet" type="text/css" href="assets/css/daterangepicker.css" />
+  <link rel="stylesheet" href="assets/css/starter.css">
+  <title>Bootstrap npm starter</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h1>TERWer</h1>
+        <form>
+          <div class="form-row">
+            <div class="col-md-5">
+              <input type="text" class="form-control" placeholder="FROM" list="Origin" name="Origin">
+              <datalist class="SmallFormField" name="Origin" id="Origin" onChange="submitForm(this.form, true)"
+                onkeypress="gblKeyPress()" onkeydown="gblKeyDown()" onfocus="gblOnFocus('Origin')" onblur="gblOnBlur()"
+                onClick="gblOnClick('QuoteMgrSearchCriteria', this.form)">
+                <option value="Taipei - Taoyuan(TPE)">台北 - 桃園(TPE)
+                </option>
             </div>
-            <div class="modal-body">
-              If you're seeing this modal after clicking the button on the page, Bootstrap's CSS and JS are both working properly.
+            <div class="col-md-5">
+              <input type="text" class="form-control" placeholder="TO" list="Destination" name="Destination">
+              <datalist class="SmallFormField" name="Destination" id="Destination"
+                onChange="submitForm(this.form, true)" onkeypress="gblKeyPress()" onkeydown="gblKeyDown()"
+                onfocus="gblOnFocus('Destination')" onblur="gblOnBlur()"
+                onClick="gblOnClick('QuoteMgrSearchCriteria', this.form)">
+                <option value="Barcelona(BCN)">巴賽隆納(BCN)
+                </option>
+                <option value="Amsterdam (AMS)">阿姆斯特丹(AMS))
+                </option>
             </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
+            <div class="col-md-2">
+              <button type="button" class="btn btn-primary">Search</button>
             </div>
           </div>
-        </div>
+        </form>
       </div>
-
-      <hr class="my-5">
-
-      <h2>Adding Bootstrap Icons</h2>
-      <p><a href="https://icons.getbootstrap.com">Bootstrap Icons</a> are included with the SVG sprite here, but there are other <a href="https://icons.getbootstrap.com/#usage">usage options</a>, too. They're styleable with text utilities and more.</p>
-
-      <svg class="bi text-danger" width="32" height="32">
-        <use xlink:href="node_modules/bootstrap-icons/bootstrap-icons.svg#heart-fill"/>
-      </svg>
-      <svg class="bi text-dark" width="32" height="32">
-        <use xlink:href="node_modules/bootstrap-icons/bootstrap-icons.svg#toggles"/>
-      </svg>
-      <svg class="bi text-primary" width="32" height="32">
-        <use xlink:href="node_modules/bootstrap-icons/bootstrap-icons.svg#shop"/>
-      </svg>
     </div>
+    <div class="row">
+      <div class="col">
+        <h2>mrwemkt</h2>
+        <form>
+          <div class="form-row">
+            <div class="col-md-5">
+              <input type="text" class="form-control" placeholder="Flight Number" name="FlightNumber">
+            </div>
+            <div class="col-md-5">
+              <input type="text" class="form-control" name="Departing" value="" placeholder="Departing" />
+            </div>
+            <div class="col-md-2">
+              <button type="button" class="btn btn-outline-primary">Search</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="row">
 
-    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
-    <script type="module" src="assets/js/starter.js"></script>
-  </body>
+    </div>
+  </div>
+
+
+  <script type="module" src="assets/js/starter.js"></script>
+  <script>
+    $(function () {
+      $('input[name="Departing"]').daterangepicker({
+        singleDatePicker: true,
+        showDropdowns: true,
+        minYear: 1901,
+        maxYear: parseInt(moment().format('YYYY'), 10)
+      }, function (start, end, label) {
+        var years = moment().diff(start, 'years');
+        alert("You are " + years + " years old!");
+      });
+    });
+  </script>
+</body>
+
 </html>
