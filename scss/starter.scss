@@ -154,6 +154,7 @@ input[type="color"]:focus,
   margin-top: -10rem;
   // background-image: linear-gradient(0deg, #f4f4f4 50%, #d81717 50%, #d81717 100%);
   padding: 4rem 0 0 0;
+
   .white-mask{
     background-image: linear-gradient(0deg, #FFFFFF 49%, #E22929 50%, #E22929 100%);
     border-radius:40px;
@@ -166,11 +167,13 @@ input[type="color"]:focus,
     left:15px;
     z-index: -1;
   }
-  form{
+  .card{
     background-color: rgba(255,255,255,0.9);
     border-radius:40px;
     padding: 3rem 1rem;
     box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.15);
+  }
+  form{
     h2{
       padding-bottom: 1rem;
     }
@@ -187,4 +190,8 @@ input[type="color"]:focus,
     }
   }
 
+}
+
+footer{
+  background-color: #222222;
 }
