@@ -34,61 +34,70 @@
       </ul>
     </div>
   </nav>
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <h1>TERWer</h1>
-        <form>
-          <div class="form-row">
-            <div class="col-md-5">
-              <input type="text" class="form-control" placeholder="FROM" list="Origin" name="Origin">
-              <datalist class="SmallFormField" name="Origin" id="Origin" onChange="submitForm(this.form, true)"
-                onkeypress="gblKeyPress()" onkeydown="gblKeyDown()" onfocus="gblOnFocus('Origin')" onblur="gblOnBlur()"
-                onClick="gblOnClick('QuoteMgrSearchCriteria', this.form)">
-                <option value="Taipei - Taoyuan(TPE)">台北 - 桃園(TPE)
-                </option>
+  <div class="container-fluid search-flight">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h1>TERWer</h1>
+          <form>
+            <div class="form-row">
+              <div class="col-md-5">
+                <div class="label-text">From</div>
+                <input type="text" class="form-control" placeholder="" list="Origin" name="Origin">
+                <datalist class="SmallFormField" name="Origin" id="Origin" onChange="submitForm(this.form, true)"
+                  onkeypress="gblKeyPress()" onkeydown="gblKeyDown()" onfocus="gblOnFocus('Origin')"
+                  onblur="gblOnBlur()" onClick="gblOnClick('QuoteMgrSearchCriteria', this.form)">
+                  <option value="Taipei - Taoyuan(TPE)">台北 - 桃園(TPE)
+                  </option>
+              </div>
+              <div class="col-md-5">
+                <div class="label-text">To</div>
+                <input type="text" class="form-control" placeholder="" list="Destination" name="Destination">
+                <datalist class="SmallFormField" name="Destination" id="Destination"
+                  onChange="submitForm(this.form, true)" onkeypress="gblKeyPress()" onkeydown="gblKeyDown()"
+                  onfocus="gblOnFocus('Destination')" onblur="gblOnBlur()"
+                  onClick="gblOnClick('QuoteMgrSearchCriteria', this.form)">
+                  <option value="Barcelona(BCN)">巴賽隆納(BCN)
+                  </option>
+                  <option value="Amsterdam (AMS)">阿姆斯特丹(AMS))
+                  </option>
+              </div>
+              <div class="col-md-2">
+                <button type="button" class="btn btn-primary">Search</button>
+              </div>
             </div>
-            <div class="col-md-5">
-              <input type="text" class="form-control" placeholder="TO" list="Destination" name="Destination">
-              <datalist class="SmallFormField" name="Destination" id="Destination"
-                onChange="submitForm(this.form, true)" onkeypress="gblKeyPress()" onkeydown="gblKeyDown()"
-                onfocus="gblOnFocus('Destination')" onblur="gblOnBlur()"
-                onClick="gblOnClick('QuoteMgrSearchCriteria', this.form)">
-                <option value="Barcelona(BCN)">巴賽隆納(BCN)
-                </option>
-                <option value="Amsterdam (AMS)">阿姆斯特丹(AMS))
-                </option>
-            </div>
-            <div class="col-md-2">
-              <button type="button" class="btn btn-primary">Search</button>
-            </div>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col">
-        <h2>mrwemkt</h2>
-        <form>
-          <div class="form-row">
-            <div class="col-md-5">
-              <input type="text" class="form-control" placeholder="Flight Number" name="FlightNumber">
-            </div>
-            <div class="col-md-5">
-              <input type="text" class="form-control" name="Departing" value="" placeholder="Departing" />
-            </div>
-            <div class="col-md-2">
-              <button type="button" class="btn btn-outline-primary">Search</button>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-    <div class="row">
-
-    </div>
-
   </div>
+  <div class="container-fluid search-status">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="white-mask"></div>
+          <form>
+            <h2>mrwemkt</h2>
+            <div class="form-row">
+              <div class="col-md-5">
+                <input type="text" class="form-control" placeholder="Flight Number" name="FlightNumber">
+              </div>
+              <div class="col-md-5">
+                <input type="text" class="form-control" name="Departing" value="" placeholder="Departing" />
+              </div>
+              <div class="col-md-2">
+                <button type="button" class="btn btn-outline-primary">Search</button>
+              </div>
+            </div>
+          </form>
+
+        </div>
+      </div>
+      <div class="row">
+      </div>
+    </div>
+  </div>
+
   <footer>
     <div class="container-fluid">
       <div class="container">
